@@ -1,6 +1,7 @@
 pipeline {
 
      agent any
+
         stages{
             stage('Git Checkout'){
                 steps{
@@ -8,14 +9,15 @@ pipeline {
                 }
             }
 
+             stage('UNIT Testing'){
+                steps{
+                    sh 'mvn test'
+
+                }
+            }
 
 
 
         }
-                    stage('UNIT Testing'){
-                         steps{
-                             sh 'mvn test'
 
-                         }
-                    }
 }
