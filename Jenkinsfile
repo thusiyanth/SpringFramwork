@@ -11,15 +11,11 @@ pipeline {
 
              stage('UNIT Testing'){
                 steps{
-                    sh 'mvn test'
+                    bat  'mvn test'
 
                 }
             }
-            stage('sh how to') {
-                    steps {
-                        sh 'ls -l'
-                    }
-                }
+
 
 
 
